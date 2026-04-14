@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Mi E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MiTienda - Pasarela de Pago</div>
+        <a href="index.html" style="color: white; text-decoration: none;">Volver a la tienda</a>
+    </header>
+
+    <main class="checkout-container">
+        <div class="checkout-summary">
+            <h2>Resumen de Compra</h2>
+            <div id="checkout-items"></div>
+            <h3 class="checkout-total">Total a pagar: $<span id="final-total">0.00</span></h3>
+        </div>
+
+        <div class="checkout-form">
+            <h2>Datos de Pago (Simulación)</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" required placeholder="Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección de Envío</label>
+                    <input type="text" id="address" required placeholder="Calle Falsa 123">
+                </div>
+                <div class="form-group">
+                    <label for="card">Número de Tarjeta</label>
+                    <input type="text" id="card" required placeholder="0000 0000 0000 0000" maxlength="16">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Vencimiento (MM/AA)</label>
+                        <input type="text" id="expiry" required placeholder="12/25" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" required placeholder="123" maxlength="3">
+                    </div>
+                </div>
+                <button type="submit" class="pay-btn">Confirmar Pago</button>
+            </form>
+            <div id="success-message" class="hidden">
+                 ¡Pago realizado con éxito! Redirigiendo a la tienda...
+            </div>
+        </div>
+    </main>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
